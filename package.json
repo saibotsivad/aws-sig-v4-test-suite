@@ -2,11 +2,14 @@
   "name": "@saibotsivad/aws-sig-v4-test-suite",
   "version": "1.0.0",
   "description": "Check your AWS V4 signing code against the official test suite.",
-  "main": "index.js",
+  "main": "index.json",
   "scripts": {
     "build": "node generate.js",
     "test": "eslint '**/*.js'"
   },
+  "files": [
+    "index.json"
+  ],
   "keywords": [
     "aws",
     "v4",
@@ -22,7 +25,6 @@
   "license": "VOL",
   "devDependencies": {
     "aws-sign-web": "^1.4.0",
-    "http-string-parser": "0.0.6",
     "jsdom": "^15.1.1"
   }
 }

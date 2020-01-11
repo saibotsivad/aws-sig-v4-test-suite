@@ -1,13 +1,23 @@
-# aws-sig-v4-test-suite
+# @saibotsivad/aws-sig-v4-test-suite
 
 These are the test suite files found in the [AWS documentation](https://docs.aws.amazon.com/general/latest/gr/signature-v4-test-suite.html).
 
-For convenience, the request files are also available as parsed objects, using [http-string-parser](https://github.com/apiaryio/http-string-parser).
+The raw request files from AWS have been parsed, and are exported as objects in the `index.json` file.
+
+## install
+
+Using npm:
+
+```bash
+npm install --save-dev @saibotsivad/aws-sig-v4-test-suite
+```
+
+## example
 
 Your test file would probably look something like this:
 
 ```js
-const suite = require('aws-sig-v4-test-suite')
+const suite = require('@saibotsivad/aws-sig-v4-test-suite')
 
 // The AWS configuration object, taken from their documentation
 suite.config
@@ -72,7 +82,9 @@ Each test object contains the following properties:
 * `sts: String` - The `.sts` file contents.
 * `request: Object` - The `.req` file parsed as an HTTP request, without modification, which contains:
 	* `request.method: String` - The method name.
-	* `request.uri: String` - The full path and query parameters.
+	* `request.uri: String` - The full path and query parameters, from the AWS test.
+	* `request.query: String` - The query portion of the URI, without the leading `?` character.
+	* `request.path: String` - The path portion of the URI, without URI encoding.
 	* `request.headers: String` - A case-sensitive map of header key-values.
 	* `request.body: String` - The body contents.
 

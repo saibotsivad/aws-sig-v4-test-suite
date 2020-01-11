@@ -18,9 +18,28 @@ Change categories are:
 
 n/a
 
-## [1.0.0] - 2019-10-04
+## [2.0.0] - 2020-01-10
+
 ### Added
+
+- The generated JSON `request` object now includes `path` and `query`
+  to make it easier to grab those parts without parsing the `uri` part.
+
+### Changed
+
+- All data is available at `/index.json` for easier parsing by
+  non-JavaScript projects.
+- To handle duplicate header keys, the `headers` object for each
+  request is now an array of arrays, each inner array a two-element
+  key/value pair. (See the [./example.js](example) to see how you
+  might use that.) Fixes #1
+
+## [1.0.0] - 2019-10-04
+
+### Added
+
 - Project initialization.
 
 [Unreleased]: https://github.com/saibotsivad/aws-sig-v4-test-suite/branches/compare/develop..master
+[2.0.0]: https://github.com/saibotsivad/aws-sig-v4-test-suite/branches/compare/v2.0.0..v1.0.0
 [1.0.0]: https://github.com/saibotsivad/aws-sig-v4-test-suite/src/v1.0.0/
