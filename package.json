@@ -1,6 +1,6 @@
 {
   "name": "@saibotsivad/aws-sig-v4-test-suite",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Check your AWS V4 signing code against the official test suite.",
   "main": "index.json",
   "scripts": {
