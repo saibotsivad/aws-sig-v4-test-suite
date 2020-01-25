@@ -18,6 +18,15 @@ Change categories are:
 
 n/a
 
+## [2.0.1] - 2010-01-24
+
+### Fixed
+
+- Multi-line header values were previously parsed incorrectly. Based
+  on my reading of [the specs](http://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.2)
+  a multi-line header `Key: A\n\s+B` would become `Key: A\sB` so
+  that's how it's parsed.
+
 ## [2.0.0] - 2020-01-10
 
 ### Added
@@ -41,5 +50,6 @@ n/a
 - Project initialization.
 
 [Unreleased]: https://github.com/saibotsivad/aws-sig-v4-test-suite/branches/compare/develop..master
+[2.0.1]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/saibotsivad/aws-sig-v4-test-suite/src/v1.0.0/

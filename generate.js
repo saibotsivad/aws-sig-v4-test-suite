@@ -25,7 +25,12 @@ const parseRequest = requestString => {
 
 	request.headers = headerLines
 		.reduce((headers, line) => {
-			headers.push(line.split(':').map(part => part.trim()))
+			if (line.startsWith(' ')) {
+				const [ key, value ] = headers.pop()
+				headers.push([ key, value + ' ' + line.trim() ])
+			} else {
+				headers.push(line.split(':').map(part => part.trim()))
+			}
 			return headers
 		}, [])
 

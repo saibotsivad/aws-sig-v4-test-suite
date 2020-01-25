@@ -61,13 +61,7 @@
             ],
             [
               "My-Header1",
-              "value1"
-            ],
-            [
-              "value2"
-            ],
-            [
-              "value3"
+              "value1 value2 value3"
             ],
             [
               "X-Amz-Date",
@@ -943,13 +937,7 @@
             ],
             [
               "My-Header1",
-              "value1"
-            ],
-            [
-              "value2"
-            ],
-            [
-              "value3"
+              "value1 value2 value3"
             ],
             [
               "X-Amz-Date",
