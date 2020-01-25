@@ -18,7 +18,16 @@ Change categories are:
 
 n/a
 
-## [2.0.1] - 2010-01-24
+## [2.0.2] - 2020-01-24
+
+### Changed
+
+- After reading through the HTTP request specs, I'm pretty sure the multi-line
+  request is being parsed wrong, therefore their assertions are invalid. Therefore,
+  until I hear differently, I have removed the `get-header-value-multiline` test
+  from the generated JSON file.
+
+## [2.0.1] - 2020-01-24
 
 ### Fixed
 
@@ -50,6 +59,7 @@ n/a
 - Project initialization.
 
 [Unreleased]: https://github.com/saibotsivad/aws-sig-v4-test-suite/branches/compare/develop..master
+[2.0.2]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/saibotsivad/aws-sig-v4-test-suite/src/v1.0.0/

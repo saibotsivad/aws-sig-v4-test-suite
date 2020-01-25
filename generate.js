@@ -63,6 +63,9 @@ const basic = fs
 	.filter(folder => folder !== 'normalize-path' && folder !== 'post-sts-token')
 	.map(load('.'))
 
+// See discussion "Notes on Bad Tests" in the README.md
+basic.splice(1, 1)
+
 const normalizePath = fs
 	.readdirSync(path.join(awsFolder, 'normalize-path'))
 	.filter(folder => !folder.includes('.txt'))
