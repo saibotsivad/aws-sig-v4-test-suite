@@ -748,9 +748,9 @@
         "name": "get-space",
         "request": {
           "method": "GET",
-          "uri": "/example",
-          "protocol": "space/",
-          "path": "/example",
+          "uri": "/example space/",
+          "protocol": "HTTP/1.1",
+          "path": "/example space/",
           "query": "",
           "headers": [
             [
@@ -1570,9 +1570,9 @@
         "name": "get-space",
         "request": {
           "method": "GET",
-          "uri": "/example",
-          "protocol": "space/",
-          "path": "/example",
+          "uri": "/example space/",
+          "protocol": "HTTP/1.1",
+          "path": "/example space/",
           "query": "",
           "headers": [
             [

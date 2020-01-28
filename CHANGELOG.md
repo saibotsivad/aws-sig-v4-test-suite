@@ -18,6 +18,17 @@ Change categories are:
 
 n/a
 
+## [2.0.3] - 2020-10-27
+
+### Fixed
+
+- The test `get-space` parses out the URI path correctly.
+
+### Removed
+
+- The test `get-utf8` was found to not conform to the published specifications,
+  so it was also removed.
+
 ## [2.0.2] - 2020-01-24
 
 ### Changed
@@ -59,6 +70,7 @@ n/a
 - Project initialization.
 
 [Unreleased]: https://github.com/saibotsivad/aws-sig-v4-test-suite/branches/compare/develop..master
+[2.0.3]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v1.0.0...v2.0.0

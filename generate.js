@@ -2,12 +2,13 @@ const fs = require('fs')
 const path = require('path')
 
 const awsFolder = './raw/aws-sig-v4-test-suite'
+const firstLineRegex = /^([^\s]+)\s(.+)\s([^\s]+)$/
 
 const read = file => fs.readFileSync(file, { encoding: 'utf8' })
 
 const parseRequest = requestString => {
 	const [ requestLine, ...lines ] = requestString.split(/\r?\n/)
-	const [ method, uri, protocol ] = requestLine.split(' ')
+	const [ , method, uri, protocol ] = firstLineRegex.exec(requestLine)
 	const request = { method, uri, protocol }
 
 	const [ path, query ] = uri.split('?')
