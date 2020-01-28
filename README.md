@@ -121,7 +121,7 @@ As a consumer of this library, it is your responsibility to handle headers in th
 
 ## Notes on Bad Tests
 
-There are two tests provided by AWS which do not conform to their specifications. I've opened communications with them and hope to find a resolution, but in the meanwhile both these tests have been removed from the exported JSON test suite.
+There are three tests provided by AWS which do not conform to their specifications. I've opened communications with them and hope to find a resolution, but in the meanwhile both these tests have been removed from the exported JSON test suite.
 
 ### get-header-value-multiline
 
@@ -176,11 +176,22 @@ Original: /documents and settings/
 =>
 Encoded Once: /documents%20and%20settings/
 =>
-Canonical (Encoded Twice):
-/documents%2520and%2520settings/
+Canonical (Encoded Twice): /documents%2520and%2520settings/
 ```
 
 However, in the `get-utf8` test, the path `/ሴ` is shown encoded only once, as `/%E1%88%B4` instead of `/%25E1%2588%25B4` which would be encoded twice.
+
+### get-space
+
+The [signature specs](https://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html) state that "each path segment must be URI-encoded twice", but in the test `get-space` it shows the canonical request as `/example%20space/` which is incorrect.
+
+```
+Original: /example space/
+=>
+Encoded Once: /example%20space/
+=>
+Canonical (Encoded Twice): /example%2520space/
+```
 
 ## Contributing
 

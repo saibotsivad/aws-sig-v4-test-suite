@@ -18,6 +18,13 @@ Change categories are:
 
 n/a
 
+## [2.0.4] - 2020-10-27
+
+### Removed
+
+- The test `get-space` actually does not encode the URI path correctly, so
+  it was also removed. 😑
+
 ## [2.0.3] - 2020-10-27
 
 ### Fixed
@@ -70,6 +77,7 @@ n/a
 - Project initialization.
 
 [Unreleased]: https://github.com/saibotsivad/aws-sig-v4-test-suite/branches/compare/develop..master
+[2.0.4]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v2.0.3...v2.0.4
 [2.0.3]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v2.0.2...v2.0.3
 [2.0.2]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v2.0.1...v2.0.2
 [2.0.1]: https://github.com/saibotsivad/aws-sig-v4-test-suite/compare/v2.0.0...v2.0.1
