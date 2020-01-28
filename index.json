@@ -149,32 +149,6 @@
         "sts": "AWS4-HMAC-SHA256\n20150830T123600Z\n20150830/us-east-1/service/aws4_request\n6a968768eefaa713e2a6b16b589a8ea192661f098f37349f4e2c0082757446f9"
       },
       {
-        "name": "get-utf8",
-        "request": {
-          "method": "GET",
-          "uri": "/ሴ",
-          "protocol": "HTTP/1.1",
-          "path": "/ሴ",
-          "query": "",
-          "headers": [
-            [
-              "Host",
-              "example.amazonaws.com"
-            ],
-            [
-              "X-Amz-Date",
-              "20150830T123600Z"
-            ]
-          ],
-          "body": ""
-        },
-        "req": "GET /ሴ HTTP/1.1\nHost:example.amazonaws.com\nX-Amz-Date:20150830T123600Z",
-        "authz": "AWS4-HMAC-SHA256 Credential=AKIDEXAMPLE/20150830/us-east-1/service/aws4_request, SignedHeaders=host;x-amz-date, Signature=8318018e0b0f223aa2bbf98705b62bb787dc9c0e678f255a891fd03141be5d85",
-        "creq": "GET\n/%E1%88%B4\n\nhost:example.amazonaws.com\nx-amz-date:20150830T123600Z\n\nhost;x-amz-date\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "sreq": "GET /ሴ HTTP/1.1\nHost:example.amazonaws.com\nX-Amz-Date:20150830T123600Z\nAuthorization: AWS4-HMAC-SHA256 Credential=AKIDEXAMPLE/20150830/us-east-1/service/aws4_request, SignedHeaders=host;x-amz-date, Signature=8318018e0b0f223aa2bbf98705b62bb787dc9c0e678f255a891fd03141be5d85",
-        "sts": "AWS4-HMAC-SHA256\n20150830T123600Z\n20150830/us-east-1/service/aws4_request\n2a0a97d02205e45ce2e994789806b19270cfbbb0921b278ccf58f5249ac42102"
-      },
-      {
         "name": "get-vanilla",
         "request": {
           "method": "GET",
@@ -993,32 +967,6 @@
         "creq": "GET\n/-._~0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\n\nhost:example.amazonaws.com\nx-amz-date:20150830T123600Z\n\nhost;x-amz-date\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "sreq": "GET /-._~0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz HTTP/1.1\nHost:example.amazonaws.com\nX-Amz-Date:20150830T123600Z\nAuthorization: AWS4-HMAC-SHA256 Credential=AKIDEXAMPLE/20150830/us-east-1/service/aws4_request, SignedHeaders=host;x-amz-date, Signature=07ef7494c76fa4850883e2b006601f940f8a34d404d0cfa977f52a65bbf5f24f",
         "sts": "AWS4-HMAC-SHA256\n20150830T123600Z\n20150830/us-east-1/service/aws4_request\n6a968768eefaa713e2a6b16b589a8ea192661f098f37349f4e2c0082757446f9"
-      },
-      {
-        "name": "get-utf8",
-        "request": {
-          "method": "GET",
-          "uri": "/ሴ",
-          "protocol": "HTTP/1.1",
-          "path": "/ሴ",
-          "query": "",
-          "headers": [
-            [
-              "Host",
-              "example.amazonaws.com"
-            ],
-            [
-              "X-Amz-Date",
-              "20150830T123600Z"
-            ]
-          ],
-          "body": ""
-        },
-        "req": "GET /ሴ HTTP/1.1\nHost:example.amazonaws.com\nX-Amz-Date:20150830T123600Z",
-        "authz": "AWS4-HMAC-SHA256 Credential=AKIDEXAMPLE/20150830/us-east-1/service/aws4_request, SignedHeaders=host;x-amz-date, Signature=8318018e0b0f223aa2bbf98705b62bb787dc9c0e678f255a891fd03141be5d85",
-        "creq": "GET\n/%E1%88%B4\n\nhost:example.amazonaws.com\nx-amz-date:20150830T123600Z\n\nhost;x-amz-date\ne3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "sreq": "GET /ሴ HTTP/1.1\nHost:example.amazonaws.com\nX-Amz-Date:20150830T123600Z\nAuthorization: AWS4-HMAC-SHA256 Credential=AKIDEXAMPLE/20150830/us-east-1/service/aws4_request, SignedHeaders=host;x-amz-date, Signature=8318018e0b0f223aa2bbf98705b62bb787dc9c0e678f255a891fd03141be5d85",
-        "sts": "AWS4-HMAC-SHA256\n20150830T123600Z\n20150830/us-east-1/service/aws4_request\n2a0a97d02205e45ce2e994789806b19270cfbbb0921b278ccf58f5249ac42102"
       },
       {
         "name": "get-vanilla",

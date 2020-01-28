@@ -65,6 +65,7 @@ const basic = fs
 
 // See discussion "Notes on Bad Tests" in the README.md
 basic.splice(1, 1)
+basic.splice(4, 1)
 
 const normalizePath = fs
 	.readdirSync(path.join(awsFolder, 'normalize-path'))

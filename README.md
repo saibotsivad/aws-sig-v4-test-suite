@@ -121,6 +121,10 @@ As a consumer of this library, it is your responsibility to handle headers in th
 
 ## Notes on Bad Tests
 
+There are two tests provided by AWS which do not conform to their specifications. I've opened communications with them and hope to find a resolution, but in the meanwhile both these tests have been removed from the exported JSON test suite.
+
+### get-header-value-multiline
+
 According to the AWS test `get-header-value-multiline`, the request:
 
 ```
@@ -162,6 +166,21 @@ X-Amz-Date:20150830T123600Z
 ```
 
 I have decided to drop this single test from the `tests.all` property, until I hear a correction on my interpretation.
+
+### get-utf8
+
+The [signature specs](https://docs.aws.amazon.com/general/latest/gr/sigv4-create-canonical-request.html) state that "each path segment must be URI-encoded twice", giving the example:
+
+```
+Original: /documents and settings/
+=>
+Encoded Once: /documents%20and%20settings/
+=>
+Canonical (Encoded Twice):
+/documents%2520and%2520settings/
+```
+
+However, in the `get-utf8` test, the path `/ሴ` is shown encoded only once, as `/%E1%88%B4` instead of `/%25E1%2588%25B4` which would be encoded twice.
 
 ## Contributing
 
